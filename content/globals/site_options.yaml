@@ -1,0 +1,5 @@
+title: 'Site Options'
+data:
+  robots_txt: |-
+    User-agent: *
+    Disallow:
