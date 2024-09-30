@@ -11,11 +11,6 @@ tabs:
               type: text
               display: 'Google Tag Manager ID'
               instructions: 'This is the unique ID for the Google Tag Manager account that will be utilized on the website.'
-          -
-            handle: google_api_key
-            field:
-              type: text
-              display: 'Google API Key'
       -
         display: Site
         fields:
