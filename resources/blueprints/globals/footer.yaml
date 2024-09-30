@@ -10,3 +10,57 @@ tabs:
               type: text
               display: Copyright
               instructions: 'The date and copywrite symbol will be prepended automatically.'
+      -
+        display: 'Social Media'
+        instructions: 'Copy and paste URL into input, if URL is not entered the icon will not appear.'
+        fields:
+          -
+            handle: linkedin
+            field:
+              type: text
+              display: LinkedIn
+          -
+            handle: facebook
+            field:
+              type: text
+              display: Facebook
+          -
+            handle: x_twitter
+            field:
+              type: text
+              display: 'X / Twitter'
+          -
+            handle: instagram
+            field:
+              type: text
+              display: Instagram
+          -
+            handle: youtube
+            field:
+              type: text
+              display: YouTube
+          -
+            handle: pinterest
+            field:
+              type: text
+              display: Pinterest
+          -
+            handle: houzz
+            field:
+              type: text
+              display: Houzz
+          -
+            handle: vimeo
+            field:
+              type: text
+              display: Vimeo
+          -
+            handle: yelp
+            field:
+              type: text
+              display: Yelp
+          -
+            handle: tiktok
+            field:
+              type: text
+              display: TikTok
