@@ -68,6 +68,19 @@ valet secure
 
 This is a Statamic starter kit for LForm projects that comes with basic config, preset globals, and preinstalled Statamic plugins. It also comes with [@lform/lwind](https://github.com/lform/lwind) and [@lform/pretty-code](https://github.com/lform/pretty-code) pre-installed and configured.
 
+### Installation Guide
+
+### Install Statamic CLI
+
+```
+composer global require statamic/cli
+```
+
+### Install Statamic
+```
+statamic new <project_name>
+```
+
 ### IMPORTANT - Look for TODOs when booting up a new project
 
 Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and follow the instructions for each instance and remove the TODO commend
