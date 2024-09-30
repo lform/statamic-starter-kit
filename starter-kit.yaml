@@ -3,6 +3,7 @@ export_paths:
   - content
   - resources
   - routes
+  - users/updates@lform.com.yaml
   - app/Http/Controllers
   - config/app.php
   - config/database.php
