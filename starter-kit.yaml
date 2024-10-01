@@ -17,6 +17,10 @@ export_paths:
   - package.json
   - tailwind.config.js
   - vite.config.js
+  - .lintstageedrc.json
+  - phpstan.neon
+  - phpunit.xml
+  - .editorconfig
 dependencies:
   aerni/factory: ^1.5
   aryehraber/statamic-captcha: ^1.13
