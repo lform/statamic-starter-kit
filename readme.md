@@ -159,8 +159,6 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and
   - Yelp
   - Tiktok
 
- 
-
 ### Baked In User Roles
 
 - Admin
