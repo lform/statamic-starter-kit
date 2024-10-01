@@ -1,0 +1,45 @@
+tabs:
+    main:
+        display: Main
+        sections:
+            - fields:
+                  - handle: linkedin
+                    field:
+                        type: text
+                        display: LinkedIn
+                  - handle: facebook
+                    field:
+                        type: text
+                        display: Facebook
+                  - handle: twitter
+                    field:
+                        type: text
+                        display: "X / Twitter"
+                  - handle: instagram
+                    field:
+                        type: text
+                        display: Instagram
+                  - handle: youtube
+                    field:
+                        type: text
+                        display: Youtube
+                  - handle: pinterest
+                    field:
+                        type: text
+                        display: Pinterest
+                  - handle: houzz
+                    field:
+                        type: text
+                        display: Houzz
+                  - handle: vimeo
+                    field:
+                        type: text
+                        display: Vimeo
+                  - handle: yelp
+                    field:
+                        type: text
+                        display: Yelp
+                  - handle: tiktok
+                    field:
+                        type: text
+                        display: Tiktok
