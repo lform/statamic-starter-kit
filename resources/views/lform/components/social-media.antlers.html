@@ -1,0 +1,43 @@
+---
+social_icons:
+  linkedin:
+    icon: 'icon-[ri--linkedin-fill]'
+    color: 'bg-social-linkedin'
+  facebook:
+    icon: 'icon-[mage--facebook]'
+    color: 'bg-social-facebook'
+  twitter:
+    icon: 'icon-[prime--twitter]'
+    color: 'bg-social-twitter'
+  instagram:
+    icon: 'icon-[mdi--instagram]'
+    color: 'bg-social-instagram'
+  youtube:
+    icon: 'icon-[mdi--youtube]'
+    color: 'bg-social-youtube'
+  pinterest:
+    icon: 'icon-[mdi--pinterest]'
+    color: 'bg-social-pinterest'
+  houzz:
+    icon: 'icon-[simple-icons--houzz]'
+    color: 'bg-social-houzz'
+  vimeo:
+    icon: 'icon-[mdi--vimeo]'
+    color: 'bg-social-vimeo'
+  yelp:
+    icon: 'icon-[bi--yelp]'
+    color: 'bg-social-yelp'
+  tiktok:
+    icon: 'icon-[ic--baseline-tiktok]'
+    color: 'bg-social-tiktok'
+---
+
+{{ foreach:global_social }}
+	{{ if value }}
+		<a
+			href="{{ value }}"
+			class="{{ view:social_icons[key]["color"] }} flex h-12 w-12 items-center justify-center rounded">
+			<span class="{{ view:social_icons[key]["icon"] }} h-6 w-6 text-white"></span>
+		</a>
+	{{ /if }}
+{{ /foreach:global_social }}

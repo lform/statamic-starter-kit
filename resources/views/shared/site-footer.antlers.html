@@ -1,8 +1,16 @@
-<footer class="container flex justify-between">
-    <p>
-        &copy;
-        {{$ date("Y") $}}
-        {{ footer:copyright }}
-    </p>
-    <a href="https://lform.com">{{ lform_settings:lform_footer_tagline ?? "LFORM | B2B Manufacturing Web Design" }}</a>
+{{# TODO - Project Setup - Site Footer #}}
+<footer class="site-footer bg-grey-100 py-10">
+	<div class="container mb-10 flex flex-wrap gap-4">
+		{{ partial:lform/components/social-media }}
+	</div>
+	<div class="container flex justify-between">
+		<p>
+			&copy;
+			{{$ date("Y") $}}
+			{{ global_site:copyright }}
+		</p>
+		<a href="https://lform.com">
+			{{ global_lform:lform_footer_tagline ?? "LFORM | B2B Manufacturing Web Design" }}
+		</a>
+	</div>
 </footer>
