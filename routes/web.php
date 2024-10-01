@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RobotsController;
 
-// Route::statamic('example', 'example-view', [
-//    'title' => 'Example'
-// ]);
+// Statamic Routes
 
+// Laravel Routes
 
-Route::get('/robots.txt', [\App\Http\Controllers\SiteController::class, 'robots']);
+// LFORM Routes - Do not alter, custom routes above.
+Route::get('/robots.txt', [RobotsController::class, 'robots']);
