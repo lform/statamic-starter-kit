@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import { addDynamicIconSelectors } from "@iconify/tailwind";
+
 const rem = (px) => `${px / 16}rem`;
 
 export default {
@@ -63,9 +65,7 @@ export default {
                 fg: "",
             },
             // TODO - Project Setup - Align Add accents from design file, remove if unnecessary
-            accent: {
-
-            },
+            accent: {},
             // TODO - Project Setup - Align greyscale with design file
             grey: {
                 100: "#DFDFE3", // Grey 1
@@ -76,20 +76,33 @@ export default {
             },
             black: {
                 transparent: "rgba(0,0,0,0.7)",
-                DEFAULT: "#000000",
+                DEFAULT: "#1a1818",
             },
             white: {
                 transparent: "rgba(255,255,255,0.7)",
-                DEFAULT: "#ffffff",
+                DEFAULT: "#fefefe",
             },
             transparent: "rgba(0,0,0,0)",
             feedback: {
-                success: "#2b6cb0",
-                "success-dark": "#0f2640",
-                warning: "#ffc74f",
-                "warning-dark": "#403214",
-                error: "#f56565",
-                "error-dark": "#401919",
+                success: "#6dcff6",
+                warning: "#fdf0a9",
+                error: "#f69679",
+            },
+            social: {
+                facebook: "#3b5998",
+                flickr: "#ff0084",
+                houzz: "#7ac142",
+                instagram: "#833ab4",
+                linkedin: "#0976b4",
+                medium: "rgba(0, 0, 0, 0.84)",
+                pinterest: "#cc2127",
+                rss: "#f26522",
+                tumblr: "#35465c",
+                twitter: "#000000",
+                youtube: "#b31217",
+                vimeo: "#1ab7ea",
+                yelp: "#f43939",
+                tiktok: "#000000",
             },
             color: {
                 // TODO - Project Setup - Align field colors with design file
@@ -179,5 +192,5 @@ export default {
     corePlugins: {
         container: false,
     },
-    plugins: [],
+    plugins: [addDynamicIconSelectors()],
 };
