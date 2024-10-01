@@ -50,7 +50,7 @@ cd public
 Link the project to Valet:
 
 ```bash
-valet link iep
+valet link <project-name>
 ```
 
 Secure the Valet link:
@@ -78,7 +78,7 @@ composer global require statamic/cli
 
 ### Install Statamic
 ```bash
-statamic new <project_name>
+statamic new <project-name>
 ```
 
 The CLI tool will ask if you want to install a starter kit, select yes.
@@ -100,7 +100,7 @@ Paste in `lform/statamic-starter-kit` when it asks what kit to install.
 
 ### IMPORTANT - Look for TODOs when booting up a new project
 
-Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and follow the instructions for each instance and remove the TODO commend
+Use `⌘ + Shift + f` to search all project files and type in `TODO - Project Setup` and follow the instructions for each instance and remove the TODO commend
 
 ### Included Packages
 
@@ -159,6 +159,8 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and
   - Yelp
   - Tiktok
 
+
+
 ### Baked In User Roles
 
 - Admin
@@ -167,14 +169,14 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and
 
 ## Usage Notes
 
-### Creating New Forms 
+### Creating New Forms
 
 When creating new forms that are sent to a client's email address we must configure the property that the email is sent to manually to support the global `Form Destination Email`
 
 To configure this properly navigate to `/resources/forms/{Form Name}.yaml` in the YAML file you should see under the `email` property there is a `to` property, we can change that to use out global destination with a fallback like the example below.
 
 ```Yml
-title: 
+title:
 email:
   -
     id:
