@@ -77,14 +77,40 @@ composer global require statamic/cli
 ```
 
 ### Install Statamic
-```
+```bash
 statamic new <project_name>
 ```
+
+The CLI tool will ask if you want to install a starter kit, select yes.
+
+```
+┌ Would you like to install a starter kit? ────────────────────┐
+│   ○ No, start with a blank site.                             │
+│ › ● Yes, let me pick a Starter Kit.                          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+Paste in `lform/statamic-starter-kit` when it asks what kit to install.
+
+```
+┌ Which starter kit would you like to install? ────────────────┐
+│ lform/statamic-starter-kit                                   │
+└──────────────────────────────────────────────────────────────┘
+ ```
 
 ### IMPORTANT - Look for TODOs when booting up a new project
 
 Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and follow the instructions for each instance and remove the TODO commend
 
+### Included Packages
+
+- Composer
+  - [@lform/pretty-code](https://github.com/lform/pretty-code)
+- NPM
+  - [@lform/lwind](https://github.com/lform/lwind)
+  - [@iconify/tailwind](https://www.npmjs.com/package/@iconify/tailwind)
+  - [@iconify/json](https://www.npmjs.com/package/@iconify/json)
+    - Icon Directory: [icon-sets.iconify.design](https://icon-sets.iconify.design/)
 
 ### Included Plugins
 
@@ -109,20 +135,31 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Setup` and
 
 ### Baked In Globals
 
-- Footer
-  - Copyright
-- Form Options
+- Form Settings
   - Form Destination Email
 - LForm Settings
   - LForm Footer Tagline
-- Site Options
+- Site Settings
   - Favicon
   - Theme Color
+  - Copyright
   - Robots.txt
-- Vendor
   - Google Tag Manager ID
   - Site Header Code
   - Site Footer Code
+- Social Media
+  - LinkedIn
+  - Facebook
+  - X / Twitter
+  - Instagram
+  - Youtube
+  - Pinterest
+  - Houzz
+  - Vimeo
+  - Yelp
+  - Tiktok
+
+ 
 
 ### Baked In User Roles
 
@@ -144,5 +181,5 @@ email:
   -
     id:
     # Copy the string below into your form config
-    to: "{{ form_options:form_email ?? 'fallbackemail@example.com' }}"
+    to: "{{ global_form:form_email ?? 'fallbackemail@example.com' }}"
 ```
