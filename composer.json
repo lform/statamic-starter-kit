@@ -1,9 +1,10 @@
 {
-    "name": "my-vendor-name/lform-statamic-starterkit",
+    "name": "lform/statamic-starter-kit",
+    "license": "MIT",
     "extra": {
         "statamic": {
             "name": "Lform Statamic Starterkit",
-            "description": "Lform Statamic Starterkit starter kit"
+            "description": "Lform Statamic Starterkit"
         }
     }
 }
