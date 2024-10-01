@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'database'),
+    'driver' => env('SESSION_DRIVER', 'file'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,8 +32,8 @@ return [
     |
     */
 
-    // Users should be logged in for 1 month
-    'lifetime' => env('SESSION_LIFETIME', 60 * 24 * 30),
+    // Users should be logged in for 1 day
+    'lifetime' => env('SESSION_LIFETIME', 60 * 24),
 
     'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
 
