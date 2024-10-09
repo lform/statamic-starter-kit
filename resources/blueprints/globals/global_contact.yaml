@@ -1,0 +1,102 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Address
+        fields:
+          -
+            handle: address_area_title
+            field:
+              type: text
+              display: 'Address Area Title'
+          -
+            import: address
+            prefix: address_
+          -
+            handle: alternate_address_list
+            field:
+              type: replicator
+              display: 'Alternate Address List'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    address:
+                      display: Address
+                      icon: form-address-field
+                      fields:
+                        -
+                          import: address
+      -
+        display: Phone
+        fields:
+          -
+            handle: phone_area_title
+            field:
+              type: text
+              display: 'Phone Area Title'
+          -
+            handle: phone_title
+            field:
+              type: text
+              display: 'Phone Title'
+              width: 33
+          -
+            handle: phone
+            field:
+              type: text
+              display: 'Phone Number'
+              width: 66
+          -
+            handle: alternate_phones
+            field:
+              type: replicator
+              display: 'Alternate Phone Numbers'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: 'Phone Title'
+                            width: 33
+                        -
+                          handle: phone
+                          field:
+                            type: text
+                            display: 'Phone Number'
+                            width: 66
+      -
+        display: Email
+        fields:
+          -
+            handle: email_area_title
+            field:
+              type: text
+              display: 'Email Area Title'
+          -
+            handle: email_title
+            field:
+              type: text
+              display: 'Email Title'
+              width: 33
+          -
+            handle: email
+            field:
+              type: text
+              display: 'Email Address'
+              width: 66
+      -
+        display: 'Hours of Operation'
+        fields:
+          -
+            handle: operation_hours
+            field:
+              type: textarea
+              display: 'Hours of Operation'
