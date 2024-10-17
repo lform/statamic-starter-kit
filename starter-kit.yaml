@@ -22,7 +22,7 @@ export_paths:
   - package.json
   - tailwind.config.js
   - vite.config.js
-  - .editorconfig
+  - .lintstagedrc.json
   - phpstan.neon
   - phpunit.xml
   - .editorconfig
