@@ -16,6 +16,7 @@
 
 /* Global Shared Components */
 @import "shared/_global.pcss";
+@import "shared/_navbar.pcss";
 
 /* Utility Classes */
 @import "@lform/lwind/css/utilities/_elements.pcss";
