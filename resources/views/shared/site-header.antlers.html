@@ -1,4 +1,19 @@
 {{# TODO - Project Setup - Site Header #}}
-<nav class="site-header sticky left-0 top-0 flex h-20 items-center bg-grey-100">
-	<div class="container">Lform Design</div>
+<nav class="site-header sticky nav-main js-nav left-0 top-0 h-20  bg-white z-50">
+    <div class="container flex justify-between items-center h-full">
+        <a href="/" class="bg-primary flex items-center justify-center aspect-square">
+           LForm Design
+        </a>
+        <div class="nav-sidebar absolute left-[-270px] z-20 top-full flex h-screen w-[270px] flex-col bg-grey-100 transition-all md:static md:left-auto md:top-auto md:h-auto md:w-auto md:flex-row md:items-center md:justify-end md:gap-10 md:bg-transparent md:p-0 xl:justify-between">
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </div>
+        <div class="nav-toggle js-nav-toggle block md:hidden">
+            <div class="nav-toggle-line nav-toggle-line-1"></div>
+            <div class="nav-toggle-line nav-toggle-line-2"></div>
+            <div class="nav-toggle-line nav-toggle-line-3"></div>
+        </div>
+    </div>
+    <div class="js-nav-backdrop nav-backdrop"></div>
 </nav>

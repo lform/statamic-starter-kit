@@ -1,0 +1,44 @@
+title: Address
+fields:
+  -
+    handle: line_1
+    field:
+      type: text
+      display: 'Address Line 1'
+      width: 50
+  -
+    handle: line_2
+    field:
+      type: text
+      display: 'Address Line 2'
+      width: 50
+  -
+    handle: city
+    field:
+      type: text
+      display: City
+      width: 50
+  -
+    handle: state
+    field:
+      type: text
+      display: State
+      width: 50
+  -
+    handle: zip_code
+    field:
+      type: text
+      display: 'ZIP Code'
+      width: 50
+  -
+    handle: country
+    field:
+      type: text
+      display: Country
+      width: 50
+  -
+    handle: url
+    field:
+      type: link
+      display: 'Address URL'
+      instructions: 'Will auto-generate a Google Maps URL if it is not filled.'

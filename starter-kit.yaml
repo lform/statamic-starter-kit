@@ -1,10 +1,15 @@
 export_paths:
+  - starter-kit.yaml
   - readme.md
   - content
   - resources
   - routes
+  - database/migrations
   - users/updates@lform.com.yaml
   - app/Http/Controllers
+  - app/Modifiers
+  - app/Services
+  - app/helpers.php
   - config/app.php
   - config/database.php
   - config/logging.php
@@ -28,3 +33,5 @@ dependencies:
   rias/statamic-redirect: ^3.7
   statamic/cms: ^5.0
   statamic/seo-pro: ^6.1
+dependencies_dev:
+  fakerphp/faker: ^1.23

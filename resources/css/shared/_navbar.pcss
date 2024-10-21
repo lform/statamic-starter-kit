@@ -1,0 +1,58 @@
+/* Nav Toggle */
+.nav-main {
+    .nav-toggle {
+        /* Change width and height of burger button with these 2 properties */
+        @apply h-6 w-10;
+        @apply relative cursor-pointer;
+
+        .nav-toggle-line {
+            /* Change height of burger lines with this property */
+            @apply h-1;
+            @apply absolute w-full bg-black rounded-full;
+            transition: all 250ms ease;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        .nav-toggle-line-1 {
+            top: 0;
+        }
+
+        .nav-toggle-line-2 {
+            top: 50%;
+        }
+
+        .nav-toggle-line-3 {
+            top: 100%;
+        }
+    }
+
+    .nav-backdrop {
+        @apply pointer-events-none absolute -z-50 h-dvh w-screen bg-black-transparent opacity-0 transition-opacity top-full;
+    }
+
+    &.nav-active {
+        .nav-toggle {
+            .nav-toggle-line-1 {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            .nav-toggle-line-2 {
+                opacity: 0;
+            }
+
+            .nav-toggle-line-3 {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+        .nav-sidebar {
+            @apply left-0 sm:left-auto;
+        }
+
+        .nav-backdrop {
+            @apply opacity-100 pointer-events-auto md:pointer-events-none md:opacity-0;
+        }
+    }
+}
