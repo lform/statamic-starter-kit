@@ -10,6 +10,7 @@ export_paths:
   - app/Modifiers
   - app/Services
   - app/helpers.php
+  - bootstrap
   - config/app.php
   - config/database.php
   - config/logging.php
