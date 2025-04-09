@@ -115,7 +115,6 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Project Se
 ### Included Plugins
 
 - SEO Pro: https://statamic.com/addons/statamic/seo-pro
-- Factory: https://statamic.com/addons/aerni/factory
 - Bard Mutator: https://statamic.com/addons/jacksleight/bard-mutator
   - Can modify Bard output
 - Captcha: https://statamic.com/addons/aryeh-raber/captcha

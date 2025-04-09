@@ -28,7 +28,6 @@ export_paths:
   - phpunit.xml
   - .editorconfig
 dependencies:
-  aerni/factory: ^1.5
   aryehraber/statamic-captcha: ^1.13
   jacksleight/statamic-bard-mutator: ^3.0
   rias/statamic-redirect: ^3.7
