@@ -3,8 +3,11 @@ export_paths:
   - content/collections/pages/home.md
   - content/trees/collections/pages.yaml
   - content/globals
-  - resources
-  - routes
+  - resources/blueprints/globals
+  - resources/css
+  - resources/fieldsets
+  - resources/js/site.js
+  - routes/web.php
   - database/migrations
   - users/updates@lform.com.yaml
   - app/Http/Controllers
