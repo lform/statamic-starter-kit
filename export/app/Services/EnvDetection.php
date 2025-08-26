@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Services;
+
 use Dotenv\Dotenv;
 use Illuminate\Foundation\Application;
 
