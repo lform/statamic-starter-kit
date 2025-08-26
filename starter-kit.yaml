@@ -1,6 +1,8 @@
 export_paths:
   - readme.md
-  - content
+  - content/collections/pages/home.md
+  - content/trees/collections/pages.yaml
+  - content/globals
   - resources
   - routes
   - database/migrations
@@ -9,7 +11,9 @@ export_paths:
   - app/Modifiers
   - app/Services
   - app/helpers.php
-  - bootstrap
+  - bootstrap/app.php
+  - bootstrap/environment.php
+  - bootstrap/providers.php
   - config/app.php
   - config/database.php
   - config/logging.php
