@@ -1,5 +1,5 @@
-title: 'Site Settings'
+title: "Site Settings"
 data:
-  robots_txt: |-
-    User-agent: *
-    Disallow:
+    robots_txt: |-
+        User-agent: *
+        Disallow:

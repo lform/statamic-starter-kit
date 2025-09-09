@@ -22,17 +22,17 @@
 */
 
 return [
-    'local' => [
-        'lform-server',
-        '*.local',
-        'DESKTOP-*',
-        '*.home',
-        'homestead',
-        'LFORM',
-        '*.lan',
-        'lformdev',
-    ],
-//    'staging' => [
-//        '/home/forge/ {Change me to staging site} .lform.dev',
-//    ],
+	'local' => [
+		'lform-server',
+		'*.local',
+		'DESKTOP-*',
+		'*.home',
+		'homestead',
+		'LFORM',
+		'*.lan',
+		'lformdev',
+	],
+	//    'staging' => [
+	//        '/home/forge/ {Change me to staging site} .lform.dev',
+	//    ],
 ];

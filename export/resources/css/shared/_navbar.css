@@ -1,0 +1,187 @@
+.site-header {
+	--nav-height: 100px;
+
+	@apply bg-grey-100 sticky left-0 top-0 z-50 w-full;
+
+	height: var(--nav-height);
+
+	.site-header-container {
+		@apply flex h-full items-center justify-between;
+
+		/* Brand Logo */
+		.logo-link {
+			@apply w-auto;
+
+			.logo-image {
+				@apply h-12 w-auto md:h-16;
+			}
+		}
+	}
+
+	/* Desktop Menu / Navigation Styles */
+	@media (min-width: theme("screens.lg")) {
+		.site-header-container {
+			.main-nav {
+				@apply flex h-full gap-x-14;
+
+				.link-container,
+				.submenu-container {
+					@apply flex h-full items-center;
+
+					.link {
+						@apply text-ms-1 relative flex items-center gap-x-3 hover:underline;
+
+						.icon {
+							@apply text-ms-2;
+						}
+
+						&:hover::after {
+							@apply w-full;
+						}
+					}
+				}
+
+				.submenu-container {
+					@apply relative flex h-full items-center;
+
+					.submenu {
+						@apply bg-grey-100 pointer-events-none absolute -left-6  top-full w-[380px] translate-y-4 bg-white p-3 opacity-0 transition-all;
+
+						.submenu-link-list {
+							@apply flex flex-col;
+
+							.submenu-link {
+								@apply text-grey-900 text-ms-1 hover:bg-grey-300/30 flex items-center justify-between px-3 py-3.5 font-medium transition-all;
+							}
+						}
+					}
+
+					&.active {
+						.submenu {
+							@apply pointer-events-auto translate-y-0 opacity-100;
+						}
+
+						.link {
+							@apply text-black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* Mobile Menu / Navigation Styles */
+	@media (width <= calc(theme("screens.lg") - 1px)) {
+		.site-header-container {
+			.main-nav {
+				@apply absolute left-0 flex w-screen max-w-[380px] -translate-x-full flex-col bg-white transition-transform duration-300;
+
+				top: var(--nav-height);
+				height: calc(100vh - var(--nav-height));
+
+				/* Menu Styles */
+				.link-container,
+				.submenu-container {
+					.link {
+						@apply text-ms-1 hover:bg-grey-300/30 relative flex w-full items-center gap-x-2 px-4 py-5;
+					}
+				}
+
+				.submenu-container {
+					.submenu {
+						@apply bg-grey-100 hidden px-4 py-2;
+
+						.submenu-headline {
+							@apply hidden;
+						}
+
+						.submenu-link-list {
+							@apply flex flex-col;
+
+							.submenu-link {
+								@apply text-grey-900 py-3.5;
+							}
+						}
+					}
+
+					&.active {
+						.submenu {
+							@apply block;
+						}
+
+						/* Submenu Mobile Dropdown Button Active State */
+						.link {
+							@apply bg-grey-100;
+						}
+					}
+				}
+			}
+		}
+
+		/* Active Mobile Nav */
+		&.nav-active {
+			.site-header-container {
+				.main-nav {
+					@apply translate-x-0;
+				}
+			}
+
+			/* Toggles menu burger icon & dark backdrop */
+			.nav-toggle {
+				.nav-toggle-line-1 {
+					top: 50%;
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+
+				.nav-toggle-line-2 {
+					opacity: 0;
+				}
+
+				.nav-toggle-line-3 {
+					top: 50%;
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+			}
+
+			.nav-backdrop {
+				@apply pointer-events-auto opacity-100 lg:pointer-events-none lg:opacity-0;
+			}
+		}
+	}
+
+	/* Nav Toggle */
+	.nav-toggle {
+		/* Change width and height of burger button with these 2 properties */
+		@apply h-6 w-12;
+		@apply relative cursor-pointer;
+		@apply block lg:hidden;
+
+		.nav-toggle-line {
+			/* Change height of burger lines with this property */
+			@apply h-1;
+			@apply absolute w-full rounded-full bg-black;
+
+			transition: all 250ms ease;
+			transform: translate(-50%, -50%);
+			left: 50%;
+		}
+
+		.nav-toggle-line-1 {
+			top: 0;
+		}
+
+		.nav-toggle-line-2 {
+			top: 50%;
+		}
+
+		.nav-toggle-line-3 {
+			top: 100%;
+		}
+	}
+
+	.nav-backdrop {
+		@apply pointer-events-none absolute left-0 top-full -z-50 w-full bg-black/20 opacity-0 transition-opacity;
+
+		height: calc(100vh - var(--nav-height));
+	}
+}

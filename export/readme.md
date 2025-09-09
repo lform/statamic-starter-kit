@@ -43,6 +43,7 @@ composer install && npm i
 ### Set up Valet
 
 Navigate to the public folder:
+
 ```bash
 cd public
 ```
@@ -77,6 +78,7 @@ composer global require statamic/cli
 ```
 
 ### Install Statamic
+
 ```bash
 statamic new <project-name>
 ```
@@ -96,7 +98,7 @@ Paste in `lform/statamic-starter-kit` when it asks what kit to install.
 ┌ Which starter kit would you like to install? ────────────────┐
 │ lform/statamic-starter-kit                                   │
 └──────────────────────────────────────────────────────────────┘
- ```
+```
 
 ### IMPORTANT - Look for TODOs when booting up a new project
 
@@ -105,18 +107,18 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Project Se
 ### Included Packages
 
 - Composer
-  - [@lform/pretty-code](https://github.com/lform/pretty-code)
+    - [@lform/pretty-code](https://github.com/lform/pretty-code)
 - NPM
-  - [@lform/lwind](https://github.com/lform/lwind)
-  - [@iconify/tailwind](https://www.npmjs.com/package/@iconify/tailwind)
-  - [@iconify/json](https://www.npmjs.com/package/@iconify/json)
-    - Icon Directory: [icon-sets.iconify.design](https://icon-sets.iconify.design/)
+    - [@lform/lwind](https://github.com/lform/lwind)
+    - [@iconify/tailwind](https://www.npmjs.com/package/@iconify/tailwind)
+    - [@iconify/json](https://www.npmjs.com/package/@iconify/json)
+        - Icon Directory: [icon-sets.iconify.design](https://icon-sets.iconify.design/)
 
 ### Included Plugins
 
 - SEO Pro: https://statamic.com/addons/statamic/seo-pro
 - Bard Mutator: https://statamic.com/addons/jacksleight/bard-mutator
-  - Can modify Bard output
+    - Can modify Bard output
 - Captcha: https://statamic.com/addons/aryeh-raber/captcha
 - Redirects: https://statamic.com/addons/rias/redirect
 
@@ -124,47 +126,44 @@ Use `⌘ + Shift + f` to search all project files and type in `TODO - Project Se
 
 - Livewire: https://statamic.com/addons/jonassiewertsen/livewire
 - Cookie Byte: https://statamic.com/addons/dryven/cookie-byte
-  - Cookie management
+    - Cookie management
 - Table on Steroids: https://statamic.com/addons/goellner/steroids-table
-  - Adds tables as a fieldtype in the control panel
+    - Adds tables as a fieldtype in the control panel
 - Runway: https://statamic.com/addons/rad-pack/runway
-  - Manage eloquent models via Statamic control panel
+    - Manage eloquent models via Statamic control panel
 - Mailchimp: https://statamic.com/addons/rad-pack/mailchimp
-
 
 ### Baked In Globals
 
 - Form Settings
-  - Form Destination Email
+    - Form Destination Email
 - LForm Settings
-  - LForm Footer Tagline
+    - LForm Footer Tagline
 - Site Settings
-  - Favicon
-  - Theme Color
-  - Copyright
-  - Robots.txt
-  - Google Tag Manager ID
-  - Site Header Code
-  - Site Footer Code
+    - Favicon
+    - Theme Color
+    - Copyright
+    - Robots.txt
+    - Google Tag Manager ID
+    - Site Header Code
+    - Site Footer Code
 - Social Media
-  - LinkedIn
-  - Facebook
-  - X / Twitter
-  - Instagram
-  - Youtube
-  - Pinterest
-  - Houzz
-  - Vimeo
-  - Yelp
-  - Tiktok
-
-
+    - LinkedIn
+    - Facebook
+    - X / Twitter
+    - Instagram
+    - Youtube
+    - Pinterest
+    - Houzz
+    - Vimeo
+    - Yelp
+    - Tiktok
 
 ### Baked In User Roles
 
 - Admin
-  - Role given to clients for dashboard access
-  - **It is highly important we do not give super-user to clients!**
+    - Role given to clients for dashboard access
+    - **It is highly important we do not give super-user to clients!**
 
 ## Usage Notes
 

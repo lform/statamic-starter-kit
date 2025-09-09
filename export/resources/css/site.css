@@ -1,23 +1,26 @@
 /* Tailwind */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+@plugin "@iconify/tailwind4";
+
+/* Theme */
+@import "@lform/lwind/css/_theme.css" layer(theme);
 
 /* Pre-flight Styles */
-@import "base/_vendor.pcss";
-@import "@lform/lwind/css/base/_global.pcss";
-@import "@lform/lwind/css/base/_site.pcss";
+@import "@lform/lwind/css/base/_global.css" layer(utilities);
+@import "@lform/lwind/css/base/_site.css" layer(utilities);
 
 /* UI Components */
-@import "@lform/lwind/css/components/_layout.pcss";
-@import "@lform/lwind/css/components/_container.pcss";
-@import "@lform/lwind/css/components/_richtext.pcss";
-@import "@lform/lwind/css/components/_flex-grid.pcss";
-
-/* Global Shared Components */
-@import "shared/_global.pcss";
-@import "shared/_navbar.pcss";
+@import "@lform/lwind/css/components/_layout.css";
+@import "@lform/lwind/css/components/_container.css";
+@import "@lform/lwind/css/components/_forms.css" layer(utilities);
+@import "@lform/lwind/css/components/_buttons.css";
+@import "@lform/lwind/css/components/_richtext.css" layer(utilities);
+@import "@lform/lwind/css/components/_flex-grid.css";
 
 /* Utility Classes */
-@import "@lform/lwind/css/utilities/_elements.pcss";
-@import "@lform/lwind/css/utilities/_typography.pcss";
+@import "@lform/lwind/css/utilities/_elements.css";
+@import "@lform/lwind/css/utilities/_typography.css";
+
+/* Global Shared Components */
+@import "./shared/_global.css";
+@import "./shared/_navbar.css";
