@@ -1,10 +1,10 @@
 {
-    "name": "lform/statamic-starter-kit",
-    "license": "MIT",
-    "extra": {
-        "statamic": {
-            "name": "Lform Statamic Starterkit",
-            "description": "Lform Statamic Starterkit"
-        }
-    }
+	"name": "lform/statamic-starter-kit",
+	"license": "MIT",
+	"extra": {
+		"statamic": {
+			"name": "Lform Statamic Starterkit",
+			"description": "Lform Statamic Starterkit"
+		}
+	}
 }

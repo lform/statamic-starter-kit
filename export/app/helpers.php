@@ -9,11 +9,15 @@ use Faker\{Factory, Generator};
  */
 function telUrl(?string $phone): string
 {
-	$number = ltrim(preg_replace('/\D/', '', strtr(
-		$phone,
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-		'22233344455566677778889999'
-	)), '1');
+	$number = ltrim(preg_replace(
+		'/\D/',
+		'',
+		strtr(
+			$phone,
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+			'22233344455566677778889999'
+		)
+	), '1');
 
 	$extension = str_split($number, 10);
 	$number = array_shift($extension);

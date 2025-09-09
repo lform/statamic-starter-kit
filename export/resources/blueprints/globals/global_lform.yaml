@@ -1,13 +1,11 @@
 tabs:
-  main:
-    display: Main
-    sections:
-      -
-        fields:
-          -
-            handle: lform_footer_tagline
-            field:
-              type: text
-              display: 'LForm Footer Tagline'
-              instructions: 'This is the text that appears on the LForm backlink.'
-              placeholder: 'LFORM | B2B Manufacturing Web Design'
+    main:
+        display: Main
+        sections:
+            - fields:
+                  - handle: lform_footer_tagline
+                    field:
+                        type: text
+                        display: "LForm Footer Tagline"
+                        instructions: "This is the text that appears on the LForm backlink."
+                        placeholder: "LFORM | B2B Manufacturing Web Design"

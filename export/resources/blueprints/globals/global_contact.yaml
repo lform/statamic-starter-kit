@@ -1,77 +1,63 @@
 tabs:
-  main:
-    display: Main
-    sections:
-      -
-        display: Address
-        fields:
-          -
-            handle: address_name
-            field:
-              type: text
-              display: 'Address Name'
-          -
-            import: address
-            prefix: address_
-      -
-        display: Phone
-        fields:
-          -
-            handle: phone_label
-            field:
-              type: text
-              display: 'Phone Label'
-              width: 33
-          -
-            handle: phone
-            field:
-              type: text
-              display: 'Phone Number'
-              width: 66
-          -
-            handle: phone_other_list
-            field:
-              type: replicator
-              display: 'Other Phone Numbers'
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  sets:
-                    new_set:
-                      display: 'New Set'
-                      fields:
-                        -
-                          handle: label
-                          field:
-                            type: text
-                            display: 'Phone Label'
-                            width: 33
-                        -
-                          handle: phone
-                          field:
-                            type: text
-                            display: 'Phone Number'
-                            width: 66
-      -
-        display: Email
-        fields:
-          -
-            handle: email_label
-            field:
-              type: text
-              display: 'Email Label'
-              width: 33
-          -
-            handle: email
-            field:
-              type: text
-              display: 'Email Address'
-              width: 66
-      -
-        display: 'Hours of Operation'
-        fields:
-          -
-            handle: operation_hours
-            field:
-              type: textarea
-              display: 'Hours of Operation'
+    main:
+        display: Main
+        sections:
+            - display: Address
+              fields:
+                  - handle: address_name
+                    field:
+                        type: text
+                        display: "Address Name"
+                  - import: address
+                    prefix: address_
+            - display: Phone
+              fields:
+                  - handle: phone_label
+                    field:
+                        type: text
+                        display: "Phone Label"
+                        width: 33
+                  - handle: phone
+                    field:
+                        type: text
+                        display: "Phone Number"
+                        width: 66
+                  - handle: phone_other_list
+                    field:
+                        type: replicator
+                        display: "Other Phone Numbers"
+                        sets:
+                            new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                    new_set:
+                                        display: "New Set"
+                                        fields:
+                                            - handle: label
+                                              field:
+                                                  type: text
+                                                  display: "Phone Label"
+                                                  width: 33
+                                            - handle: phone
+                                              field:
+                                                  type: text
+                                                  display: "Phone Number"
+                                                  width: 66
+            - display: Email
+              fields:
+                  - handle: email_label
+                    field:
+                        type: text
+                        display: "Email Label"
+                        width: 33
+                  - handle: email
+                    field:
+                        type: text
+                        display: "Email Address"
+                        width: 66
+            - display: "Hours of Operation"
+              fields:
+                  - handle: operation_hours
+                    field:
+                        type: textarea
+                        display: "Hours of Operation"

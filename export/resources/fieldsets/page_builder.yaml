@@ -1,0 +1,17 @@
+title: "Page Builder"
+fields:
+    - handle: page_builder
+      field:
+          collapse: true
+          type: replicator
+          display: "Page Builder"
+          sets:
+              content:
+                  display: Content
+                  icon: text-formatting-wrap-image-left
+                  sets:
+                      call-to-action:
+                          display: "Call to Action"
+                          icon: share-mega-phone
+                          fields:
+                              - import: block_call_to_action

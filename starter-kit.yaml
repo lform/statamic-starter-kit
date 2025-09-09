@@ -1,33 +1,44 @@
 export_paths:
   - readme.md
-  - content
-  - resources
-  - routes
+  - content/collections/pages/home.md
+  - content/trees/collections/pages.yaml
+  - content/globals
+  - resources/blueprints/globals
+  - resources/css
+  - resources/fieldsets
+  - resources/js/site.js
+  - routes/web.php
   - database/migrations
   - users/updates@lform.com.yaml
   - app/Http/Controllers
   - app/Modifiers
   - app/Services
   - app/helpers.php
-  - bootstrap
+  - bootstrap/app.php
+  - bootstrap/environment.php
+  - bootstrap/providers.php
   - config/app.php
   - config/database.php
   - config/logging.php
   - config/queue.php
   - config/session.php
+  - config/services.php
+  - config/mail.php
   - config/statamic/assets.php
   - config/statamic/cp.php
   - config/statamic/git.php
   - config/statamic/live_preview.php
-  - package.json
-  - tailwind.config.js
   - vite.config.js
-  - .lintstagedrc.json
-  - .editorconfig
+  - package.json
+  - .env
+  - .env.local
 dependencies:
   aryehraber/statamic-captcha: ^1.13
   jacksleight/statamic-bard-mutator: ^3.0
   rias/statamic-redirect: ^3.7
   statamic/seo-pro: ^6.1
+  symfony/http-client: ^7.3
+  symfony/mailgun-mailer: ^7.3
 dependencies_dev:
   fakerphp/faker: ^1.23
+  lform/pretty-code: ^1.2
