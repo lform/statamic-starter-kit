@@ -1,0 +1,242 @@
+{{ captcha:head }}
+<section>
+	{{ form :handle="form_handle" }}
+		{{ if success }}
+			<div class="bg-feedback-success/20 border-feedback-success text-ms-1 rounded-md border px-7 py-4">
+				{{ success }}
+			</div>
+		{{ else }}
+			{{ if errors }}
+				<div class="bg-feedback-error/20 border-feedback-error text-ms-1 rounded-md border px-7 py-4">
+					{{ errors }}
+						{{ value }}
+						<br />
+					{{ /errors }}
+				</div>
+			{{ /if }}
+			<div class="dynamic-form">
+				{{ fields }}
+					{{# Wrapper handles the width of the input and contain the label + input #}}
+					<div
+						class="input-container {{ if validate | contains('required') }}required{{ /if }}"
+						style="width: {{ width }}%">
+						{{# This handles the label for all fields #}}
+						{{ if !hide_display }}
+							<label class="input-label">
+								{{ display }}
+								{{ if validate | contains('required') }}
+									<span class="ml-0.5">*</span>
+								{{ /if }}
+							</label>
+							{{ if error }}
+								<p class="text-feedback-error -text-ms-1 mb-2">{{ error }}</p>
+							{{ /if }}
+						{{ /if }}
+						{{ if type == 'text' }}
+							<input
+								type="{{ input_type }}"
+								name="{{ handle }}"
+								value="{{ old }}"
+								{{ if placeholder }}
+                            placeholder="{{ placeholder }}"
+                            {{ /if }}
+								class="field-text"
+								{{ if validate | contains('required') }}
+                            required
+                            {{ /if }} />
+						{{ elseif type == 'textarea' }}
+							<textarea
+								type="{{ input_type }}"
+								name="{{ handle }}"
+								{{ if placeholder }}
+                            placeholder="{{ placeholder }}"
+                            {{ /if }}
+								class="field-textarea"
+								rows="3"
+								{{ if validate | contains('required') }}
+                            required
+                            {{ /if }}>
+{{ old }}</textarea
+							>
+						{{ elseif type == 'select' || type == 'dictionary' }}
+							<div class="field-select-container">
+								<select
+									name="{{ handle }}"
+									class="field-select"
+									{{ if validate | contains('required') }}
+                                required
+                                {{ /if }}>
+									{{ if placeholder }}
+										<option value="" disabled selected>
+											{{ placeholder }}
+										</option>
+									{{ /if }}
+									{{ foreach:options }}
+										<option value="{{ key }}">
+											{{ value }}
+										</option>
+									{{ /foreach:options }}
+								</select>
+								<span class="icon-[lineicons--chevron-down] field-select-icon"></span>
+							</div>
+						{{ elseif type == 'checkboxes' }}
+							<div
+								class="{{ if inline }}grid sm:grid-cols-2{{ else }}flex flex-col{{ /if }} gap-x-6 gap-y-3 pt-3.5">
+								{{ foreach:options }}
+									<div class="field-checkbox-container">
+										<input
+											name="{{ handle }}[]"
+											type="checkbox"
+											value="{{ key | trim }}"
+											id="checkbox-{{ handle | trim }}-{{ key | trim }}"
+											class="field-checkbox-input" />
+										<label
+											for="checkbox-{{ handle | trim }}-{{ key | trim }}"
+											class="field-checkbox-label">
+											<div class="field-checkbox-icon-container">
+												<span class="icon-[mingcute--check-fill] field-checkbox-icon"></span>
+											</div>
+											{{ if value }}
+												{{ value }}
+											{{ else }}
+												{{ key }}
+											{{ /if }}
+										</label>
+									</div>
+								{{ /foreach:options }}
+							</div>
+						{{ elseif type == 'radio' }}
+							<div class="p-2" style="width: {{ width }}%">
+								{{ if !hide_display }}
+									<label>
+										{{ display }}
+										{{ if validate | contains('required') }}
+											<span class="ml-0.5 text-red-500">*</span>
+										{{ /if }}
+									</label>
+								{{ /if }}
+								<div class="flex flex-col py-1">
+									<div
+										class="{{ if inline == true }}flex-row flex-wrap{{ else }}flex-col{{ /if }} flex">
+										{{ foreach:options }}
+											<div class="my-1 mr-6 flex items-center">
+												<input
+													class="h-full"
+													id="radio-{{ handle | trim }}-{{ key | trim }}"
+													type="radio"
+													name="{{ handle }}"
+													value="{{ key | trim }}"
+													{{ if index == 0 && validate|contains("required") }}required{{ /if }} />
+												<label
+													for="radio-{{ handle | trim }}-{{ key | trim }}"
+													class="ml-3 flex cursor-pointer items-center justify-center">
+													{{ if value }}{{ value }}
+													{{ else }}
+														{{ key }}
+													{{ /if }}
+												</label>
+											</div>
+										{{ /foreach:options }}
+									</div>
+								</div>
+							</div>
+							<!-- Toggle fieldtype -->
+						{{ elseif type == 'toggle' }}
+							<div class="p-2" style="width: {{ width }}%">
+								{{ if !hide_display }}
+									<label>
+										{{ display }}
+										{{ if validate | contains('required') }}
+											<span class="ml-0.5 text-red-500">*</span>
+										{{ /if }}
+									</label>
+								{{ /if }}
+								<div class="mt-2">
+									<label class="inline-flex cursor-pointer items-center py-1">
+										<input
+											type="checkbox"
+											name="{{ handle }}"
+											value="true"
+											class="peer sr-only"
+											{{ if validate|contains("required") }}required{{ /if }} />
+										<div
+											class="peer relative h-6 w-11 rounded-full bg-gray-300 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none rtl:peer-checked:after:-translate-x-full"></div>
+										{{ if placeholder }}
+											<span class="ml-3">{{ placeholder }}</span>
+										{{ /if }}
+									</label>
+								</div>
+							</div>
+							<!-- Integer fieldtype -->
+						{{ elseif type == 'integer' }}
+							<div class="p-2" style="width: {{ width }}%">
+								{{ if !hide_display }}
+									<label>
+										{{ display }}
+										{{ if validate | contains('required') }}
+											<span class="ml-0.5 text-red-500">*</span>
+										{{ /if }}
+									</label>
+								{{ /if }}
+								<div class="py-1">
+									<input
+										type="number"
+										name="{{ handle }}"
+										value="{{ old:value }}"
+										{{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
+										class="w-full rounded-md border border-gray-300 px-4 py-2"
+										{{ if validate | contains('required') }}required{{ /if }} />
+								</div>
+								{{ if error }}
+									<p class="text-gray-500">{{ error }}</p>
+								{{ /if }}
+							</div>
+							<!-- Assets fieldtype -->
+						{{ elseif type == 'assets' }}
+							<div class="p-2" style="width: {{ width }}%">
+								{{ if !hide_display }}
+									<label>
+										{{ display }}
+										{{ if validate | contains('required') }}
+											<span class="ml-0.5 text-red-500">*</span>
+										{{ /if }}
+									</label>
+								{{ /if }}
+								<div class="py-1">
+									<input
+										type="file"
+										name="{{ handle }}[]"
+										multiple="multiple"
+										class="w-full rounded-md py-3"
+										{{ if validate | contains('required') }}required{{ /if }} />
+								</div>
+								{{ if error }}
+									<p class="text-gray-500">{{ error }}</p>
+								{{ /if }}
+							</div>
+							<!-- Spacer fieldtype -->
+						{{ elseif type == 'spacer' }}
+							<div class="my-5 p-1" style="width: {{ width }}%">
+								{{ if width == '100' }}
+									<div class="h-[2px] w-full border border-gray-100"></div>
+								{{ /if }}
+							</div>
+						{{ /if }}
+					</div>
+				{{ /fields }}
+			</div>
+			<input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}" />
+			<div class="mt-5">
+				{{ captcha }}
+			</div>
+			<div class="mt-6 flex flex-col items-center gap-y-3">
+				<button
+					type="submit"
+					class="button button-primary w-full max-w-full justify-center text-center md:w-auto md:!px-20">
+					Request Estimate
+				</button>
+				<p class="-text-ms-2 text-center">Your information stays private – no spam, ever.</p>
+			</div>
+		{{ /if }}
+	{{ /form }}
+</section>
