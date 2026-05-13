@@ -38,7 +38,7 @@ export_paths:
 dependencies:
   aryehraber/statamic-captcha: ^1.13
   jacksleight/statamic-bard-mutator: ^3.0
-  rias/statamic-redirect: ^3.7
+  rias/statamic-redirect: ^4.1.7
   statamic/seo-pro: ^6.1
   symfony/http-client: ^7.3
   symfony/mailgun-mailer: ^7.3
