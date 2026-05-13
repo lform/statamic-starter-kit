@@ -8,6 +8,7 @@
 /.phpunit.cache
 /.vscode
 /.zed
+/.claude
 /auth.json
 /node_modules
 /public/hot
@@ -21,9 +22,8 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 auth.json
-npm-debug.log
-yarn-error.log
 
-# Renable to version assets
-/public/img
-/public/assets
+# Disable versioning of media assets, resized images, and forms
+/public/img/
+/public/assets/
+/storage/forms/
