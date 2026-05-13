@@ -1,9 +1,9 @@
 export_paths:
   - readme.md
+  - content/assets/assets.yaml
   - content/collections
   - content/globals
   - content/trees/collections/pages.yaml
-  - content/globals
   - resources/blueprints
   - resources/css
   - resources/js
@@ -44,4 +44,3 @@ dependencies:
   symfony/mailgun-mailer: ^7.3
 dependencies_dev:
   fakerphp/faker: ^1.23
-  lform/pretty-code: ^1.2
