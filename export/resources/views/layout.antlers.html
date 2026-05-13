@@ -19,14 +19,18 @@
 	<body>
 		{{# Site Header #}}
 		{{ partial:shared/site-header }}
+
 		{{# Site Main #}}
 		<main class="site-main">
 			{{ template_content }}
 		</main>
+
 		{{# Site Footer #}}
 		{{ partial:shared/site-footer }}
+
 		{{# Google Tag Manager #}}
 		{{ partial:lform/system/gtag-manager }}
+
 		{{ if global_site:site_footer_code }}
 			{{ global_site:site_footer_code }}
 		{{ /if }}

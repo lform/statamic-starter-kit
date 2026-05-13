@@ -1,17 +1,32 @@
-title: "Page Builder"
+title: 'Page Builder'
 fields:
-    - handle: page_builder
-      field:
-          collapse: true
-          type: replicator
-          display: "Page Builder"
+  -
+    handle: page_builder
+    field:
+      collapse: true
+      type: replicator
+      display: 'Page Builder'
+      sets:
+        main:
+          display: Main
           sets:
-              content:
-                  display: Content
-                  icon: text-formatting-wrap-image-left
-                  sets:
-                      call-to-action:
-                          display: "Call to Action"
-                          icon: share-mega-phone
-                          fields:
-                              - import: block_call_to_action
+            image-text:
+              display: 'Image & Text'
+              icon: text-formatting-wrap-image-margin-left
+              fields:
+                -
+                  import: block_image_text
+                -
+                  handle: config
+                  field:
+                    type: group
+                    display: Config
+                    fields:
+                      -
+                        handle: is_layout_reversed
+                        field:
+                          type: toggle
+                          display: 'Is Layout Reversed?'
+                          instructions: 'The image defaults to the left side of the screen, when this is enabled the video will appear on the right hand side.'
+                          width: 50
+                          instructions_position: below

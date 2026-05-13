@@ -1,0 +1,30 @@
+<div>
+    <section class="container py-12 sm:py-16 md:py-20">
+        <div
+            class="flex flex-col items-center gap-x-12 gap-y-12 xl:gap-x-36 {{ if config:is_layout_reversed }}lg:flex-row-reverse{{ else }}lg:flex-row{{ /if }}"
+        >
+            <figure class="h-auto w-full max-w-[500px] xl:max-w-[590px]">
+                {{ glide :src="image" width="590" height="500" }}
+                <img
+                    src="{{ url }}"
+                    loading="lazy"
+                    width="{{ width }}"
+                    height="{{ height }}"
+                    alt="{{ alt }}"
+                    class="rounded-xl"
+                />
+                {{ /glide }}
+            </figure>
+            <div class="flex-1">
+                <h2
+                    class="text-secondary text-ms-4 sm:text-ms-6 md:text-ms-7 mb-4 font-semibold leading-tight"
+                >
+                    {{ title }}
+                </h2>
+                <div class="rich-text -text-ms-1 sm:text-ms-0 md:text-ms-1">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

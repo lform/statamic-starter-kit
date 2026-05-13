@@ -1,0 +1,33 @@
+title: "Block - Image & Text"
+fields:
+  - handle: title
+    field:
+      type: text
+      display: Title
+      validate:
+        - required
+  - handle: content
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+        - underline
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      validate:
+        - required
+  - handle: image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: Image
+      instructions: "Minimum 590 x 500px recommended, is auto-cropped"
+      validate:
+        - required

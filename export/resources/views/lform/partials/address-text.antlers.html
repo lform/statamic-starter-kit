@@ -1,0 +1,18 @@
+{{#
+    This partial is design to be used with the Address Fieldset to compile the full address as a string. Usage Note: When
+    using the Address Fieldset you must set the prefix to "address_".
+#}}
+
+{{ address_line_1 }}
+{{ if address_line_2 }}
+	, {{ address_line_2 }}
+{{ /if }}
+{{ if lineBreak }}
+	{{# Used to add a standard line break to the address #}}
+	<br />
+{{ /if }}
+{{ address_city }}
+, {{ address_state }} {{ address_zip_code }}
+{{ if address_country }}
+	, {{ address_country }}
+{{ /if }}
